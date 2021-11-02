@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<html xmlns:th="thymeleaf.org">
+<!-- acesta este un framework pentru for/foreach... etc     mult mai performante (eficienta)-->
+<head>
+    <meta charset="UTF-8">
+    <title>SpringEx</title>
+</head>
+<body>
+<br><br><br>
+<h1 style="color: rgb(30,60,20);" th:text="#{textul.meu}"><span th:text="${nume}" style="color: red;"></span></h1>
+
+<br><br>
+
+<table>
+    <tr th:each="b:${listaMea}">
+        <td th:text="${b}"></td>
+    </tr>
+</table>
+
+<table>
+
+    <tr th:each="c:${students}">
+        <td th:text="${c.name}"></td>
+        <td th:text="${c.lastName}"></td>
+
+    </tr>
+</table>
+</body>
+</html>
